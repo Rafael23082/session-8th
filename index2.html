@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<h1>DAILY WORLD NEWS</h1>
+<div class="tabs">
+  <div class="tab" data-tab="tab1">News</div>
+  <div class="tab" data-tab="tab2">Reviews</div>
+  <div class="tab" data-tab="tab3">Comments</div>
+</div>
+<div class="tab-content" id="tab1"><p>ACTIVIST'S KILLING PUTS ZIMBABWE IN 'DANGEROUS DIRECTION,' OPPOSITION LEADER SAYS</p>
+  The situation was calm in the capital as the curfew took effect Wednesday night.
+  Rajoelina, a 49-year-old former DJ, initially faced 12 competitors for Thursday's election. But a group of 10 candidates said Monday they would not take part, claiming the electoral process was full of flaws. They urged people to stay away from polling booths.
+  The candidates who are boycotting include political rivals such as former leaders Marc Ravalomanana and Hery Rajaonarimampianina. They have organized peaceful marches across the capital almost every day since late September, but security forces have violently suppressed them, leading to serious injuries and dozens of arrests.
+  The protests on the the Indian Ocean island intensified in recent weeks as the opposition, some churches and civil society pushed for a postponement.
+  The election was postponed by a week from Nov. 9 by the country’s highest court after one candidate was injured during protests when security forces fired tear gas. But critics continue to push for further postponement.
+  Many in Madagascar and in the international community had hoped this election would break with a past of disputed votes, coups and political instability that have characterized the country since gaining independence from France in 1960.</div>
+<div class="tab-content" id="tab2">Average Review of 3.8 stars. 2.8 Million reviews</div>
+<div class="tab-content" id="tab3">None</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  $(document).ready(function () {
+    showTab("tab1");
+    $(".tab").click(function () {
+      var tabId = $(this).data("tab");
+      showTab(tabId);
+    });
+    function showTab(tabId) {
+      $(".tab-content").hide();
+      $(".tab").removeClass("active");
+      $("#" + tabId).show();
+      $("[data-tab='" + tabId + "']").addClass("active");
+    }
+  });
+</script>
+</body>
+</html>

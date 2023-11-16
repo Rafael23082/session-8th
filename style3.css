@@ -1,0 +1,23 @@
+.accordion {
+  width: 80%;
+  margin: auto;
+}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding:20px;
+}
+.question {
+  background-color: #f4f4f4;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.answer {
+  display: none;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}

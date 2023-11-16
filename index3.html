@@ -1,0 +1,29 @@
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+<div class="container">
+    <div class="title">Questions and Answers</div>
+    <div class="question">Question: What is the importance of a prototype?</div>
+    <div class="answer">Answer: It saves time and money, it provides early insights of the requirements, it serves as a reference when developing the product. It also helps identify problems to fix. Finally, we can use the prototype for presentations.</div>
+
+    <div class="question">Question: What are the types of prototype?</div>
+    <div class="answer">Answer: There are three types of prototypes. Which are low fidelity prototype, medium fidelity prototype and high fidelity prototype.</div>
+
+    <div class="question">Question: What are the differences between the types of prototype?</div>
+    <div class="answer">Answer: Low fidelity prototype uses low quality materials such as paper, cardboard, etc. A medium fidelity prototype is a prototype with limited functionality but clickable areas which presents the interactions and navigation possibilities of an application. Medium fidelity prototypes are usually built upon storyboards or user scenarios. Unlike low fidelity prototype, high fidelity prototype uses materials used in the final product. It already ressembles the final product.</div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $(".question").click(function () {
+      $(".answer").slideUp();
+      $(this).next(".answer").slideToggle();
+    });
+  });
+</script>
+
+</body>
+</html>

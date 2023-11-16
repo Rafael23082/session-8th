@@ -1,0 +1,35 @@
+*{
+    padding-left: 3px;
+}
+h1{
+    text-align: center;
+}
+label{
+    display:block;
+    margin-bottom: 10px;
+    margin-top:5px;
+}
+.q{
+    font-size: 20px;
+    font-family: arial;
+    padding-bottom:4px;
+    padding-top:4px;
+}
+input{
+    padding:8px;
+    border-radius: 10px;
+}
+option{
+    padding:8px;
+    border-radius: 10px;
+}
+.container{
+    margin-top: 60px;
+    border-radius: 20px;
+    border:2px solid black;
+    max-width: 400px;
+    background-color: lightgoldenrodyellow;
+}
+body{
+    background-color: aliceblue;
+}

@@ -1,0 +1,55 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="style4.css">
+  </head>
+  <body>  
+<h1>Dynamic Price Calculator</h1>
+<center>
+<div class="container">
+<form id="priceCalculator">
+    <h2>Please fill in the form below:</h2>
+    <label for="basePrice" class="q">Base Price: ($)</label>
+    <input type="number" id="basePrice" value="100" readonly>
+    <label for="option1" class="q">Flavour:</label>
+    <select id="option1" class="q">
+    <option value="0">Regular</option>
+    <option value="10">Chocolate (+$10)</option>
+    <option value="20">Vanilla (+$20)</option>
+    </select>
+    <label for="option2" class="q">Extra toppings:</label>
+    <select id="option2" class="q">
+    <option value="0">None</option>
+    <option value="2">Oreo (+$2)</option>
+    <option value="5">Kitkat (+$5)</option>
+    <option value="10">Chocolate sauce (+$10)</option>
+    <option value="3">Peanuts (+$3)</option>
+    </select>
+    <label for="totalPrice" class="q">Total Price: ($)</label>
+    <input type="text" id="totalPrice" value="100" readonly>
+    </center>
+</div>
+</form>
+
+<script>
+    $(document).ready(function() {
+    // Function to update the total price based on selected options
+    function updateTotalPrice() {
+        var basePrice = parseFloat($('#basePrice').val());
+        var option1 = parseFloat($('#option1').val());
+        var option2 = parseFloat($('#option2').val());
+
+        var totalPrice = basePrice + option1 + option2;
+
+        $('#totalPrice').val(totalPrice.toFixed(2));
+    }
+    $('#option1, #option2').change(function() {
+        updateTotalPrice();
+    });
+    updateTotalPrice();
+    });
+</script>
+
+</body>
+</html>
