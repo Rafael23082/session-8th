@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="style5.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+<h1>Unexpexted surprise</h1>
+<div class="dropdown">
+    Hover Here!
+    <div class="dropdown-content">
+        <p>Click the button below for a surprise!!</p>
+        <button id="revealsurprise">Reveal Surprise</button>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#revealsurprise').click(function () {
+            alert("Surprise!");
+        });
+    });
+</script>
+</body>
+</html>
